@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import Box from './box'
+import Box from './box';
 
 class Grid extends Component {
     render() { 
-        const width = (this.props.cols * 14);
-        
+        const width = this.props.cols * 4;
+
         let rowsArr = [];
 
         let boxClass = "";
@@ -13,9 +13,9 @@ class Grid extends Component {
             for (let j = 0; j < this.props.cols; j++) {
                 let boxId = i + "_" + j;
 
-                boxClass = this.props.gridFull[i][j] ? "life-box on" : "life-box off";
+                boxClass = this.props.gridFull[i][j] ? "ant-box on" : "ant-box off";
                 rowsArr.push(
-                    <Box 
+                    <Box
                         boxClass={boxClass}
                         key={boxId}
                         boxId={boxId}
@@ -27,12 +27,12 @@ class Grid extends Component {
             }
         }
 
-        return (
-            <div className="life-grid" style={{width: width}}>
+        return ( 
+            <div className="ant-grid" style={{width: width}}>
                 {rowsArr}
             </div>
         );
     }
 }
- 
+
 export default Grid;

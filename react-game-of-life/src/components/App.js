@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from 'react-router-dom'
 
 import GameOfLife from './game-of-life/gameOfLife';
+import LangtonsAnt from './langtons-ant/langtonsAnt';
+import Navbar from './navbar';
 
 class App extends Component {
     render() { 
         return (
-            <div>
-                <GameOfLife />
-            </div>
+            <Router>
+                <Navbar />
+                <Switch>
+                    <Route path="/GameOfLife">
+                        <GameOfLife />
+                    </Route>
+                    <Route path="/LangtonsAnt">
+                        <LangtonsAnt />
+                    </Route>
+                </Switch>
+            </Router>
         );
     }
 }
