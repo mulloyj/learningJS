@@ -21,6 +21,11 @@ class App extends Component {
                     <Route path="/LangtonsAnt">
                         <LangtonsAnt />
                     </Route>
+                    <Route path="/">
+                        <h1>
+                            Josh React Site
+                        </h1>
+                    </Route>
                 </Switch>
             </Router>
         );
