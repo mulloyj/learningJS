@@ -144,6 +144,7 @@ class GameOfLife extends Component {
     }
 
     componentDidMount() {
+        document.title = "Game Of Life";
         this.seed();
         this.playButton();
     }
