@@ -147,6 +147,10 @@ class GameOfLife extends Component {
         this.seed();
         this.playButton();
     }
+
+    componentWillUnmount() {
+        this.pauseButton();
+    }
    
     render() { 
         return (
@@ -172,5 +176,5 @@ class GameOfLife extends Component {
           );
     }
 }
- 
+
 export default GameOfLife;
