@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-import Main from './components/main'
+import App from './components/App'
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

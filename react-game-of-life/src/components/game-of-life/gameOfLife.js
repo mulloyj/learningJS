@@ -6,7 +6,7 @@ function arrayClone(arr) {
     return JSON.parse(JSON.stringify(arr));
 }
 
-class Main extends Component {
+class GameOfLife extends Component {
     constructor() {
         super();
 
@@ -173,4 +173,4 @@ class Main extends Component {
     }
 }
  
-export default Main;
+export default GameOfLife;
