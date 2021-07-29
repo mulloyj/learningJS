@@ -128,6 +128,21 @@ class Main extends Component {
         });
     }
 
+    createPremade = (posArray) => {
+        this.slow();
+
+        let newGrid = Array(this.rows).fill().map(() => Array(this.cols).fill(false));
+
+        for (let [row, col] of posArray) {
+            newGrid[row][col] = true;
+        }
+
+        this.setState({
+            gridFull: newGrid,
+            generation: 0,
+        });
+    }
+
     componentDidMount() {
         this.seed();
         this.playButton();
@@ -145,6 +160,7 @@ class Main extends Component {
                     clear={this.clear}
                     seed={this.seed}
                     gridSize={this.gridSize}
+                    createPremade={this.createPremade}
                 />
                 <Grid 
                     gridFull={this.state.gridFull}
