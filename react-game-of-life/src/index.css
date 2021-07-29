@@ -1,5 +1,5 @@
 body {
-  background-color: darkgrey;
+  background-color: black;
 }
 
 .box {
@@ -50,4 +50,8 @@ h4 {
 
 h4 {
   margin-top: 0px;
+}
+
+button {
+  margin: 2px;
 }

@@ -16,7 +16,7 @@ class Main extends Component {
 
         this.state = {
             generation: 0,
-            gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
+            gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false)),
         }
     }
 
@@ -103,8 +103,8 @@ class Main extends Component {
         for (let [x, y] of coordinateArray) {
             if (!(row + x < 0 || row + x >= this.rows)
                 && !(col + y < 0 || col + y >= this.cols)
-                && this.state.gridFull[row + x][col + y]
-            ) count++;
+                && this.state.gridFull[row + x][col + y])
+                count++;
         }
 
         return count;

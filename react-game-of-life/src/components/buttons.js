@@ -11,22 +11,22 @@ class Buttons extends Component {
         return (
             <div className="center">
                 <ButtonToolbar>
-                    <button className="btn btn-default" onClick={this.props.playButton}>
+                    <button className="btn btn-primary" onClick={this.props.playButton}>
                         Play
                     </button>
-                    <button className="btn btn-deafult" onClick={this.props.pauseButton}>
+                    <button className="btn btn-secondary" onClick={this.props.pauseButton}>
                         Pause
                     </button>
-                    <button className="btn btn-deafult" onClick={this.props.slow}>
+                    <button className="btn btn-danger" onClick={this.props.slow}>
                         Slow
                     </button>
-                    <button className="btn btn-deafult" onClick={this.props.fast}>
+                    <button className="btn btn-warning" onClick={this.props.fast}>
                         Fast
                     </button>
-                    <button className="btn btn-deafult" onClick={this.props.clear}>
+                    <button className="btn btn-info" onClick={this.props.clear}>
                         Clear
                     </button>
-                    <button className="btn btn-deafult" onClick={this.props.seed}>
+                    <button className="btn btn-info" onClick={this.props.seed}>
                         Seed
                     </button>
                     <Dropdown onSelect={this.handleSelect}>
