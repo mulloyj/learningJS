@@ -5,15 +5,19 @@ class Navbar extends Component {
     render() { 
         return (
             <div>
-                <Link to="/">
-                    Home
-                </Link>
-                <Link to="/GameOfLife">
-                    Game of Life
-                </Link>
-                <Link to="/LangtonsAnt">
-                    Langton's Ant
-                </Link>
+                <nav class="navbar navbar-expand navbar-dark bg-primary">
+                    <Link className="navbar-brand" to="/">
+                        Josh Site
+                    </Link>
+                    <div className="navbar-nav">
+                        <Link className="nav-item nav-link" to="/GameOfLife">
+                            Game of Life
+                        </Link>
+                        <Link className="nav-item nav-link" to="/LangtonsAnt">
+                            Lanton's Ant
+                        </Link>
+                    </div>
+                </nav>
             </div>
         );
     }
