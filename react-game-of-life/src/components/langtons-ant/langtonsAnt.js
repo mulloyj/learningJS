@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Grid from './grid';
 import AntMenu from './antMenu';
 
+import '../../css/ant.css';
+
 const lodash = require('lodash');
 
 const UP = 0;
@@ -131,7 +133,7 @@ class LangtonsAnt extends Component {
 
     render() { 
         return (
-            <div>
+            <div className = "ant">
                 <h1>Langton's Ant</h1>
                 <Grid
                     gridFull={this.state.gridFull}

@@ -8,6 +8,7 @@ import {
 import GameOfLife from './game-of-life/gameOfLife';
 import LangtonsAnt from './langtons-ant/langtonsAnt';
 import Navbar from './navbar';
+import Home from './home/home'
 
 class App extends Component {
     render() { 
@@ -22,9 +23,7 @@ class App extends Component {
                         <LangtonsAnt />
                     </Route>
                     <Route path="/">
-                        <h1>
-                            Josh React Site
-                        </h1>
+                        <Home />
                     </Route>
                 </Switch>
             </Router>

@@ -16,7 +16,7 @@ class Grid extends Component {
                 boxClass = this.props.gridFull[i][j] ? "ant-box on" : "ant-box off";
 
                 for (let ant of this.props.ants) {
-                    if (ant.x === i && ant.y === j) boxClass = "ant-box ant";
+                    if (ant.x === i && ant.y === j) boxClass = "ant-box ant-color";
                 }
 
                 rowsArr.push(

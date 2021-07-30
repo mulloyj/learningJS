@@ -1,0 +1,52 @@
+body {
+  background: black;
+}
+
+.ant-box {
+  display: inline-block;
+  border: 1px solid darkgrey;
+  width: 15px;
+  height: 15px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+}
+
+.off {
+  background-color: lightgray;
+}
+
+.on {
+  background-color: black;
+}
+
+.ant-color {
+  background-color: red;
+}
+
+.ant-grid {
+  width: 150px;
+  line-height: 0;
+  margin: auto;
+  box-shadow: 0px 0px 20px white;
+  margin-top: 20px;
+}
+
+.ant-text {
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+}
+
+h4 {
+  margin-top: 0px;
+}
+
+button {
+  margin: 2px;
+}
+
+a {
+  margin: 2px;
+}

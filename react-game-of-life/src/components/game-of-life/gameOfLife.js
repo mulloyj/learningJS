@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Grid from './grid';
-import Buttons from './buttons'
+import Buttons from './buttons';
+import '../../css/life.css';
 
 function arrayClone(arr) {
     return JSON.parse(JSON.stringify(arr));
@@ -155,7 +156,7 @@ class GameOfLife extends Component {
    
     render() { 
         return (
-            <div>
+            <div className="life">
                 <h1>The Game of Life</h1>
                 <Buttons 
                     playButton={this.playButton}
