@@ -40,16 +40,16 @@ class LangtonsAnt extends Component {
     moveForward(ant) {
         switch(ant.direction) {
             case UP:
-                ant.x = ((ant.x - 1) + this.cols) % this.cols;
+                ant.x = ((ant.x - 1) + this.rows) % this.rows;
                 break;
             case RIGHT:
-                ant.y = ((ant.y + 1) + this.rows) % this.rows;
+                ant.y = ((ant.y + 1) + this.cols) % this.cols;
                 break;
             case DOWN:
-                ant.x = ((ant.x + 1) + this.cols) % this.cols;
+                ant.x = ((ant.x + 1) + this.rows) % this.rows;
                 break;
-            default:
-                ant.y = ((ant.y - 1) + this.rows) % this.rows;
+            case LEFT:
+                ant.y = ((ant.y - 1) + this.cols) % this.cols;
                 break;
         }
     }
@@ -64,9 +64,10 @@ class LangtonsAnt extends Component {
 
     play = () => {
         let newGrid = arrayClone(this.state.gridFull);
+        let newAnts = arrayClone(this.state.ants);
         let current;
 
-        for (let ant of this.state.ants) {
+        for (let ant of newAnts) {
             current = newGrid[ant.x][ant.y];
             if (current) this.rotateRight(ant);
             else this.rotateLeft(ant);
@@ -76,6 +77,7 @@ class LangtonsAnt extends Component {
 
         this.setState({
             gridFull: newGrid,
+            ants: newAnts,
         });
     }
 
@@ -110,6 +112,18 @@ class LangtonsAnt extends Component {
         this.intervalId = setInterval(this.play, this.speed);
     }
 
+    clear = () => {
+        let newGrid = Array(this.rows).fill().map(() => Array(this.cols).fill(false));
+        let newAnts = [new Ant(25, 35)];
+
+        this.setState({
+            gridFull: newGrid,
+            ants: newAnts,
+        });
+
+        this.pauseButton();
+    }
+
     componentDidMount() {
         document.title = "Langton's Ant";
         this.playButton();
@@ -129,6 +143,7 @@ class LangtonsAnt extends Component {
                     playButton={this.playButton}
                     pauseButton={this.pauseButton}
                     addAnt={this.addAnt}
+                    clear={this.clear}
                 />
             </div>
         );
