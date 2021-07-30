@@ -6,6 +6,7 @@ class AntMenu extends Component {
             <div className="center">
                 <button className="btn btn-primary" onClick={this.props.playButton}>Play</button>
                 <button className="btn btn-secondary" onClick={this.props.pauseButton}>Pause</button>
+                <button className="btn btn-warning" onClick={this.props.clear}>Clear</button>
                 <button className="btn btn-info" onClick={this.props.addAnt}>Add Ant</button>
             </div>
         );
