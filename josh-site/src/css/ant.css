@@ -2,7 +2,13 @@ body {
   background: black;
 }
 
-.life-box {
+.center {
+  margin: auto;
+  display: table;
+  margin-top: 10px;
+}
+
+.ant-box {
   display: inline-block;
   border: 1px solid darkgrey;
   width: 15px;
@@ -19,11 +25,11 @@ body {
   background-color: black;
 }
 
-.box:hover {
-  background: #00ccff;
+.ant-color {
+  background-color: red;
 }
 
-.life-grid {
+.ant-grid {
   width: 150px;
   line-height: 0;
   margin: auto;
@@ -31,10 +37,7 @@ body {
   margin-top: 20px;
 }
 
-h1,
-h2,
-h3,
-h4 {
+.ant-text {
   color: white;
   margin: auto;
   text-align: center;
