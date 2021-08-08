@@ -102,9 +102,11 @@ class GameOfLife extends Component {
         let count = 0;
 
         for (let [x, y] of coordinateArray) {
-            if (!(row + x < 0 || row + x >= this.rows)
-                && !(col + y < 0 || col + y >= this.cols)
-                && this.state.gridFull[row + x][col + y])
+            let newX = (row + x + this.rows) % this.rows;
+            let newY = (col + y + this.cols) % this.cols;
+            if (!(newX < 0 || newX >= this.rows)
+                && !(newY < 0 || newY >= this.cols)
+                && this.state.gridFull[newX][newY])
                 count++;
         }
 

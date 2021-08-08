@@ -1,12 +1,14 @@
 .split {
-  margin: auto;
   display: flex;
 }
 
 .bio-card {
+  margin: 10rem 2rem;
   width: 18rem;
 }
 
 .todo-card {
-  width: 27rem;
+  margin: 10rem 2rem;
+  width: 18rem;
+  flex: wrap;
 }
